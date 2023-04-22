@@ -1,7 +1,9 @@
 import { useState } from "react"
 import "./MiOrg.css"
 
-const MiOrg = () =>{
+const MiOrg = (props) =>{
+
+    console.log(props)
 
     const [mostrar, actualizarMostrar] =useState(true)
     const manejarClick = () =>{
@@ -11,7 +13,7 @@ const MiOrg = () =>{
 
     return <section className="orgSection">
         <h3 className="title">Mi organización</h3>
-        <img src="/img/add.png" alt="add" onClick={manejarClick}></img>
+        <img src="/img/add.png" alt="add" onClick={props.cambiarMostrar}></img>
     </section>
 }
 
